@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style type="text/css" rel="style sheet">
+	.myhead,.foot{background-color:#5d5d5d;height:30px;text-align:center;width:100%;line-height:30px;color:#ffffff;}
+	.main{height:400px;overflow:hidden;padding:0 200px;}
+	.middle{width:100%;background-color:#ffccff;float:left;height:400px;}
+	.left{width:200px;background-color:#ccff99;float:left;height:400px;margin-left:-100%;position:relative;left:-200px;}
+	.right{width:200px;background-color:#c0c0c0;float:left;height:400px;margin-left:-200px;position:relative;right:-200px;}
+  </style>
+ </head>
+ <body>
+  <div class="myhead">head of holy grail</div>
+  <div class="main">
+  <div class="middle">--middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text----middle text--</div>
+  <div class="left">--left text----left text----left text----left text----left text----left text----left text----left text----left text----left text----left text----left text----left text----left text----left text----left text--</div>
+  <div class="right" >--right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text----right text--</div>
+ </div>
+ <div class="foot">the end</div>
+ </body>
+</html>
