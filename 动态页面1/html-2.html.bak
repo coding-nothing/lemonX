@@ -1,0 +1,16 @@
+﻿<html>
+<head>
+实验4
+</head>
+<body>
+<h1>学生信息登记</h1><br>
+<form action="Untitled-1.aspx"  method="get">
+姓名：<input type="text" name="XM"/>
+<br>
+性别：<input type="radio" name="sexual" value="男"/>男
+<input type="radio" name="sexual" value="女"/>女
+<br>
+ <input type="submit" value="提交">
+</form>
+</body>
+</html>
