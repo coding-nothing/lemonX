@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>ADO-test</title>
+ </head>
+ <body>
+   <h3 >plaese input your number</h3>
+<form runat="server" method="post" action="实验5.aspx">
+<input type="text" id="inum" />
+<input type="submit" value="search"/>
+<hr></form>
+
+ </body>
+</html>
