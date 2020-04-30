@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edgr,chrome=1">
+
+  <title>静态网页练习</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="../jquery-3.4.1.min.js"></script>
+
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+		//字体自适应
+	(function(doc,win){
+		var docEl=doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+			var clientWidth = docEl.clientWidth;  
+			if (!clientWidth) return; 
+			docEl.style.fontSize = 10 * (clientWidth / 640) + 'px';  
+			
+		};
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);   
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document,window);
+
+  </script>
+
+ <style>
+   body{
+   min-width: 1050px;
+   max-width: 100%;
+   }
+   html{
+   overflow-x: auto;
+   }
+   *{
+   font-family: "Century Gothic";
+   }
+   .mycenter{
+   text-align: center;
+   }
+   .hello{ 
+   width: 100%;
+   height: 40rem;
+   color: #ffffff;
+   background: url("img/back1.gif");
+   }
+   .myrow{
+   margin-top: 4rem;
+   }
+   .word1{
+   margin-top: 8rem; 
+   font-family: 'Microsoft YaHei Light';
+   font-size: 1.6rem;
+   }
+   .setup{ 
+   height: 10rem;
+   border: solid 0.5px #949494;
+   }
+   .account,.pass{
+   background-color: transparent;
+   border: solid 0.5px #949494;
+   width: 100%;
+   height: 100%;
+   color: #ffffff;
+   padding: 0 20px;
+   }
+   button{
+   background: transparent;
+   border: solid 0.5px;
+   opacity: 0.5;
+   color: #ffffff;
+   }
+   .third{
+   margin-top: 12vh;
+   width: 100%;
+   height: 32rem;
+   background: url("img/back2.gif");
+   }
+   .myrow1{
+   margin: 7.2rem 0 0 0; 
+   font-family: 'Microsoft YaHei Light'; 
+   font-size: 1.52rem;
+   }
+   .myrow2{
+   margin: 1.6rem 0 0 0; 
+   font-size: 0.56rem;
+   }
+   .but1{
+   width: 45%; 
+   height: 100%; 
+   padding: 0.56rem; 
+   font-size: 0.48rem; 
+   font-family: 'Microsoft YaHei Light';
+   }
+   .but2{
+   width: 45%; 
+   height: 100%;
+   padding: 0.56rem; 
+   font-size: 0.48rem; 
+   font-family: 'Microsoft YaHei Light';
+   }
+   .layer{
+   display: none;
+   position: absolute;
+   top: 0;
+   z-index: 1;
+   width: 12rem;
+   height: 12rem;
+   background-color: #515151;
+   color: #ffffff;
+   opacity: 0.8;
+   transition:all.5s; 
+   }
+   #hedge:hover #layer{ display: block;}
+   .h{
+   font-size: 0.8rem; 
+   padding:4rem 0 0 0;
+   }
+   .ic{
+   margin: 2.5rem 0 0 0; 
+   padding:0 0 0 3rem;
+   }
+   .ic1{
+   background:url('img/f.png'); 
+   width:0.32rem; 
+   height:0.76rem; 
+   margin:0 0.6rem; 
+   display:inline-block;
+   }
+   .ic2{
+   background:url('img/i.png'); 
+   width:0.84rem; 
+   height:0.84rem; 
+   margin:0 0.6rem; 
+   display:inline-block;
+   }
+   .ic3{
+   background:url('img/t.png');
+   width:0.72rem; 
+   height:0.6rem; 
+   margin:0 0.6rem;
+   display:inline-block;
+   }
+ </style>
+
+
+ </head>
+ <body >
+
+	<div class="hello">
+		<div class="container">
+			<div class="row mycenter word1">
+				 Hello World
+			</div>
+			<div class="row myrow">
+				  <div class="col-xs-8 col-xs-offset-2 mycenter" style="font-size: 0.6rem; opacity: 0.3; ">China is speeding up strategic plan, standards, traffic rules, laws and regulations on accident-incurred liabilities for its smart car industry, Economic Information Daily reported Thursday.</div>
+			</div>
+			<div class="row myrow">
+				  <div class=" col-xs-10 col-xs-offset-1">
+					<div class="setup">
+						<div class="row" style="margin:2rem 0 0 0">
+							<div class="col-xs-4 col-xs-offset-4 mycenter" style="font-size:0.64rem;opacity: 1;">CREAT YOUR ACCOUNT</div>
+						</div>
+						<div class="row" style="margin:0.8rem 0 0 0;">
+							<div class="col-xs-2 col-xs-offset-5 mycenter" style="font-size: 0.4rem;opacity: 0.3;">IT'S ABSOLUTELY FREE</div>
+						</div>
+						<div class="row" style="margin: 1.6rem 0 0 0;">
+								<div class="col-xs-3 col-xs-offset-2" style="height: 2rem;">
+									<form style="height:100%">
+										<input type="text" class=" account" id="account" autofocus="autofocus" placeholder="mail" onchange="myVerify()">
+									</form>
+								</div>
+								<div class="col-xs-3" style="height: 2rem;">
+									<form style="height:100%">
+										<input type="text" class=" pass" id="pass" placeholder="password">
+									</form>
+								</div>
+								<div class="col-xs-2" style="height: 2rem;">
+									<form style="height:100%">
+										<button  style="height:100%;width: 100%; font-size: 0.48rem">sign up</buttton>
+									</form>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="row" style="margin:9vh 0 0 0;">
+			<div class="col-xs-4 col-xs-offset-4 mycenter" style="font-size: 0.56rem;">Boatloads of Awesome</div>
+		</div>
+		<div class="row" style="margin: 4vh 0 0 0">
+			<div class="col-xs-8 col-xs-offset-2 mycenter" style="font-size: 1.400rem">Ready-made, customizable, HTML landing page sections</div>
+		</div>
+		<div class="row" style="margin: 8vh 0 0 0">
+			<div class="col-xs-5 col-xs-offset-1 " style="height: 15vh;">	
+			    <div class="media" >
+					<div class="media-left">
+						<img src="img/iphone.gif" width="30rem" height="49rem">
+					</div>
+					<div class="media-body">
+						<div style="font-size: 0.800rem;">Mobile First</div>
+						<div style="font-size: 0.640rem; color: #686868; margin: 1vh 0 0 0;">All modulz are built mobile-first for maximum device compatibility.</div>
+					</div>
+			    </div>
+			</div>
+			<div class="col-xs-5 col-xs-offset-1" style="height:15vh">
+				<div class="media-left">
+					<img src="img/check.gif" width="40rem" height="37rem" border="0" alt="">
+				</div>
+				<div class="media-body">
+					<div style="font-size: 0.800rem;">Accessibility</div>
+					<div style="font-size: 0.640rem; color:#686868;">Support for IE8, mobile and tablet devices, screenreaders and color blind.</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin: 8vh 0 0 0;">
+			<div class="col-xs-5 col-xs-offset-1 " style="height: 16vh">
+			    <div class="media-left">
+					<img src="img/pencil.gif" width="49rem" height="48rem" border="0" alt="">
+			    </div>
+				<div class="media-body" >
+					<div style="font-size: 0.800rem;">Fluid Typography</div>
+					<div style="font-size: 0.640rem; color: #686868;">On different screen sizes, fonts automagically scale with the viewport.</div>
+				</div>
+			</div>
+			<div class="col-xs-5 col-xs-offset-1 " style="height: 16vh">
+			    <div class="media-left">
+					<img src="img/setting.gif" width="50rem" height="42rem" border="0" alt="">
+			    </div>
+				<div class="media-body">
+					<div style="font-size: 0.800rem;">Customization</div>
+					<div style="font-size: 0.640rem; color: #686868;">Make any design your own using the Style Editor. Personalize fonts, colors, and layouts to create the custom look you want.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="third">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-5 col-xs-offset-1" style="color:#ffffff">
+					<div class="row myrow1">
+						<div class="col-xs-12">Supportive policies for China's smart car</div>
+					</div>
+					<div class="row myrow2">
+						<div class="col-xs-12">China will come up with its own smart car standards, traffic rules, laws and regulations relating to safety, according to the China Industry Innovation Alliance		for the Intelligent and Connected Vehicles.</div>
+					</div>
+					<div class="row" style="margin:10vh 0 0 0;">
+						<button class="but1">CHECK OUT FEATURES</button>
+						<button class="but2">TRY PRODUCT FOR FREE</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row mycenter" style="margin: 4rem 0 0 0; font-size: 1.68rem">
+			Our Awesome Crew
+		</div>
+		<div class="row mycenter" style="margin: 1.6rem 0 0 0; font-size: 0.72rem">
+			Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job, brush up on your skills.
+		</div>
+		<div class="row" style="margin: 2rem 0 0 0;">
+			<div class="col-xs-4 col-xs-offset-4" >
+				<div id="hedge" style="width: 12rem; height: 12rem;">
+					<img src="img/timg.gif" width="300rem" height="300rem" border="0" alt="">
+					<div class="layer" id="layer">
+						<div class="mycenter h">Hedgehog</div>
+							<div class="ic">
+								<div class="ic1"></div>
+								<div class="ic2"></div>
+								<div class="ic3"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+ <script>
+
+  $("button").hover(
+  //按钮效果
+  function(){$(this).css("background-color","white");$(this).css("color","black");},
+  function(){$(this).css("background","transparent");$(this).css("color","white");}
+  );
+
+	function myVerify(){
+		//邮箱格式验证
+		var mail=document.getElementById("account");
+		var reg=new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+		if(mail.value==""||mail.value==null)
+		{
+			mail.value="please input mail address";
+			return false;
+		}
+		else if(!reg.test(mail.value))
+		{
+			mail.value="please input correct mail";
+			return false;
+		}
+		else return true;
+	}
+
+  </script>
+ </body>
+</html>
